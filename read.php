@@ -11,7 +11,7 @@
     }
     $resultat = $bdd->query('SELECT * FROM hiking');
 
-    echo 'Votre message à bien été envoyer';
+    // echo 'Votre message à bien été envoyer';
 
 ?>
 
@@ -28,6 +28,7 @@
       <!-- Afficher la liste des randonnées -->
       <table class="tableau">
                 <tr>
+                    <td class="tableau">id</td>
                     <td class="tableau">name</td>
                     <td class="tableau">difficulty</td>
                     <td class="tableau">distance</td>
@@ -36,6 +37,7 @@
                 </tr>
                 <?php while ($donnees = $resultat->fetch()) { ?>
                  <tr>
+                    <td class="tableau"><?php echo $donnees['id'];?> </td>
                     <td class="tableau"><?php echo $donnees['name'];?> </td>
                     <td class="tableau"><?php echo $donnees['difficulty'];?></td>
                     <td class="tableau"><?php echo $donnees['distance'];?></td>

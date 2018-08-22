@@ -10,9 +10,9 @@ if (isset ($_POST['button'])){
     // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : '.$e->getMessage());
     }
-   $bdd->exec("INSERT INTO hiking (name,difficulty,distance,duration,height_difference ) VALUES('".$_POST['name']."','".$_POST['difficulty']."','".$_POST['distance']."','".$_POST['duration']."','".$_POST['height_difference']."')");
+//    $bdd->exec("INSERT INTO hiking (name,difficulty,distance,duration,height_difference ) VALUES('".$_POST['name']."','".$_POST['difficulty']."','".$_POST['distance']."','".$_POST['duration']."','".$_POST['height_difference']."')");
     
-   $bdd->exec("UPDATE hiking SET champ_login='login',champ_mdp='mot_de_passe' WHERE champ_id_membre = id_membre");
+   $bdd->exec("UPDATE hiking SET 'name',difficulty,distance,duration,height_difference WHERE id = id");
 }
 
 ?>
@@ -20,13 +20,17 @@ if (isset ($_POST['button'])){
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Ajouter une randonnée</title>
-	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
+	<title>Modifier une randonnée</title>
+	<link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 	<a href="/php-pdo/read.php">Liste des données</a>
-	<h1>Ajouter</h1>
+	<h1>Modifier</h1>
 	<form action="" method="post">
+    <div>
+			<label for="id">id</label>
+			<input type="number" name="name" value="">
+		</div>
 		<div>
 			<label for="name">Name</label>
 			<input type="text" name="name" value="">
