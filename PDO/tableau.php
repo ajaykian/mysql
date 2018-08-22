@@ -22,7 +22,7 @@
     <body>
         
         <table class="tableau">
-                <tr class>
+                <tr>
                     <td class="tableau">ville</td>
                     <td class="tableau">haut</td>
                     <td class="tableau">bas</td>

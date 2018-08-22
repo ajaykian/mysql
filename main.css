@@ -1,0 +1,10 @@
+.tableau{
+    border: 2px solid darkred;
+    background: lightgrey;
+   
+}
+label, select, input{
+    width: 150px;
+    display: inline-block;
+    margin: 5px 0;
+  }
