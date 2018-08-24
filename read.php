@@ -28,21 +28,28 @@
       <!-- Afficher la liste des randonnées -->
       <table class="tableau">
                 <tr>
+                    <!-- <td class="tableau">id</td> -->
                     <td class="tableau">id</td>
                     <td class="tableau">name</td>
                     <td class="tableau">difficulty</td>
                     <td class="tableau">distance</td>
                     <td class="tableau">duration</td>
                     <td class="tableau">dénivelé</td>
+                    <td class="tableau">modification</td>
+                    <td  class="tableau">supprimer</td>
                 </tr>
                 <?php while ($donnees = $resultat->fetch()) { ?>
                  <tr>
-                    <td class="tableau"><?php echo $donnees['id'];?> </td>
+                    <?php $id=$donnees['id'];?>
+                    <td class="tableau"><?php echo $id;?> </td>
                     <td class="tableau"><?php echo $donnees['name'];?> </td>
                     <td class="tableau"><?php echo $donnees['difficulty'];?></td>
                     <td class="tableau"><?php echo $donnees['distance'];?></td>
                     <td class="tableau"><?php echo $donnees['duration'];?></td>
                     <td class="tableau"><?php echo $donnees['height_difference'];?></td>
+                    <?php echo '<td class="tableau"><a href="update.php?id='.$id.'">update</a></td>'?>
+                    <?php echo '<td class="tableau"><a href="delete.php?id='.$id.'">supprimer</a></td>'?>
+                    
                 </tr>
                  <?php } ?>
     </table>
